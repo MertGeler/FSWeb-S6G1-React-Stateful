@@ -577,7 +577,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function getWrappedName(outerType, innerType, wrapperName) {
       var displayName = outerType.displayName;
       if (displayName) {
@@ -652,7 +651,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -1146,7 +1144,6 @@ if ("development" !== "production") {
       mapChildren(children, function () {
         n++; // Don't return anything
       });
-
       return n;
     }
 
@@ -1651,7 +1648,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -1691,7 +1687,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -2984,7 +2979,6 @@ if ("development" !== "production") {
         isMessageLoopRunning = false;
       } // Yielding to the browser will give it a chance to paint, so we can
     };
-
     var schedulePerformWorkUntilDeadline;
     if (typeof localSetImmediate === 'function') {
       // Node.js and old IE.
@@ -3313,7 +3307,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkKeyStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3322,7 +3315,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkPropStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3331,7 +3323,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkCSSPropertyStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3340,7 +3331,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkHtmlStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3349,7 +3339,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkFormFieldValueStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3979,7 +3968,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -4019,7 +4007,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -4350,7 +4337,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     function getWrappedName$1(outerType, innerType, wrapperName) {
@@ -5433,7 +5419,6 @@ if ("development" !== "production") {
       if (!isCustomProperty && typeof value === 'number' && value !== 0 && !(isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name])) {
         return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
       }
-
       {
         checkCSSPropertyStringCoercion(value, name);
       }
@@ -10241,7 +10226,6 @@ if ("development" !== "production") {
       return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
       ;
     }
-
     var objectIs = typeof Object.is === 'function' ? Object.is : is;
 
     /**
@@ -12952,7 +12936,6 @@ if ("development" !== "production") {
       // }
       // return value;
     }
-
     function registerSuspenseInstanceRetry(instance, callback) {
       instance._reactRetry = callback;
     }
@@ -13259,7 +13242,6 @@ if ("development" !== "production") {
               // below since it will bail out on the isMounted check later.
             }
           }
-
           return targetInst;
         }
         targetNode = parentNode;
@@ -16957,7 +16939,6 @@ if ("development" !== "production") {
         return true;
       } // If it's a boundary we should avoid, then we prefer to bubble up to the
     }
-
     function findFirstSuspended(row) {
       var node = row;
       while (node !== null) {
@@ -19296,7 +19277,6 @@ if ("development" !== "production") {
             // For a more detailed description of this block, see:
             // https://github.com/facebook/react/pull/13384
           }
-
           var componentName = source ? getComponentNameFromFiber(source) : null;
           var componentNameMessage = componentName ? "The above error occurred in the <" + componentName + "> component:" : 'The above error occurred in one of your React components:';
           var errorBoundaryMessage;
@@ -19702,7 +19682,6 @@ if ("development" !== "production") {
         return null;
       } // This function is called when a Suspense boundary suspends. It returns the
     }
-
     var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
     var didReceiveUpdate = false;
     var didWarnAboutBadClass;
@@ -22329,7 +22308,6 @@ if ("development" !== "production") {
                   throw new Error('We must have new props for new mounts. This error is likely ' + 'caused by a bug in React. Please file an issue.');
                 } // This can happen when we abort work.
               }
-
               var _rootContainerInstance = getRootHostContainer();
               var _currentHostContext = getHostContext();
               var _wasHydrated2 = popHydrationState(workInProgress);
@@ -22367,7 +22345,6 @@ if ("development" !== "production") {
                 }
               } // Continue with the normal Suspense path.
             }
-
             if ((workInProgress.flags & DidCapture) !== NoFlags) {
               // Something suspended. Re-render with the fallback children.
               workInProgress.lanes = renderLanes; // Do not reset the effect list.
@@ -25367,7 +25344,6 @@ if ("development" !== "production") {
                 // concurrent events.
               }
             }
-
             if (exitStatus === RootFatalErrored) {
               var _fatalError = workInProgressRootFatalError;
               prepareFreshStack(root, NoLanes);
@@ -26396,7 +26372,6 @@ if ("development" !== "production") {
           ReactCurrentBatchConfig$3.transition = prevTransition; // Once passive effects have run for the tree - giving components a
         }
       }
-
       return false;
     }
     function enqueuePendingPassiveProfilerEffect(fiber) {
@@ -26840,7 +26815,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     var fakeActCallbackNode = {};
     function scheduleCallback$1(priorityLevel, callback) {
       {
@@ -28962,7 +28936,6 @@ function Sayac() {
     marginBottom: '0.3em',
     color: 'royalblue' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-counter container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29035,7 +29008,6 @@ function Input() {
 
     /* ADIM 4 */
   };
-
   var reset = function reset() {
     /* ADIM 5 */
   };
@@ -29044,7 +29016,6 @@ function Input() {
     marginBottom: '0.3em',
     color: 'crimson' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-input container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29119,7 +29090,6 @@ function RuhHalleri() {
     marginBottom: '0.3em',
     color: 'royalblue' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-moods container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "RuhHalleri"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29292,7 +29262,7 @@ Yorumları takip edin.
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
-var enIyilerListesi = [{
+var enIyilerListesi = exports.enIyilerListesi = [{
   id: '1',
   isim: 'Ada Lovelace'
 }, {
@@ -29311,7 +29281,6 @@ var enIyilerListesi = [{
   id: '6',
   isim: 'Carol Shaw'
 }];
-exports.enIyilerListesi = enIyilerListesi;
 function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
@@ -29328,7 +29297,6 @@ function Programcilar() {
     marginTop: '0.5em',
     color: 'royalblue' // 🤔 kutlarken renk gold'a dönecek
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-programmers container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Programc\u0131lar"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29394,7 +29362,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64727" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
